@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Hey {{data.name}}</h1>
+<form [formGroup]="dialogData">
+  <div mat-dialog-content>
+    <p>What You Want to Add?</p>
+    <mat-form-field>
+      <mat-label>Please mention here</mat-label>
+      <input formControlName="customization" matInput >
+    </mat-form-field>
+  </div>
+</form>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button (click)="onSubmit()" mat-button cdkFocusInitial>Ok</button>
+</div>

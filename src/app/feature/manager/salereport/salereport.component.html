@@ -1,0 +1,78 @@
+<app-managernavbar></app-managernavbar>
+
+<div style="display: flex;">
+    <app-managersidebar></app-managersidebar>
+    <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+        <div class="product d-flex flex-wrap"> 
+            <h3 style="margin-left: 2vw; margin-top: 2vw; margin-right: 1vw;">Sales Report</h3>
+            <table id="salestable" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Product ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Product Category</th>
+                    <th scope="col">Product Quantity</th>
+                    <th scope="col">Product Iamge</th>
+                    <th scope="col">Customer Email</th>
+                    <th scope="col">Product Price</th>
+                    <th scope="col">Product Rating</th>
+                    <th scope="col">Total Bill</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of customerData">
+                    <th scope="row">{{item.id}}</th>
+                    <th>
+                        <ul>
+                            <li  *ngFor="let val of item.cart">
+                                {{val.itemId}}
+                            </li>
+                        </ul>
+                    </th>
+                    <td>
+                        <ul>
+                            <li  *ngFor="let val of item.cart">
+                                {{val.name}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li  *ngFor="let val of item.cart">
+                                {{val.category}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li  *ngFor="let val of item.cart">
+                                {{val.quantity}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li  *ngFor="let val of item.cart">
+                                <img style="height: 3vw; width: 3vw; margin-bottom: 4px;" src="{{val.image}}" alt="">
+                            </li>
+                        </ul>
+                    </td>
+                    <td>{{item.email}}</td>
+                    <td>
+                        <li  *ngFor="let val of item.cart">
+                            {{val.price}}
+                        </li>
+                    </td>
+                    <td>
+                        <li  *ngFor="let val of item.cart">
+                            {{val.rating}}
+                        </li>
+                    </td>
+                    <td>{{item.totalBill}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

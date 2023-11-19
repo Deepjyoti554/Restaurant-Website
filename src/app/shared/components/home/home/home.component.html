@@ -1,0 +1,51 @@
+<app-usernavbar></app-usernavbar>
+<div class="banner">
+    <img src="./../../../../../assets/image/banner.png" alt="">
+    <div class="bannerText">
+        <div class="bannerHeading">
+            <h1>Best food for <br> your taste</h1>
+            <p>Discover delectable cuisine and unforgettable moments <br> in our welcoming, culinary haven.</p>
+        </div>
+        <div class="bannerButton">
+            <a routerLink="/signup"><button id="leftButton">Order Now</button></a>
+            <a (click)="bookTable()"><button>Book Table</button></a>
+        </div>
+    </div>
+</div>
+
+<div class="category">
+    <div class="category_info">
+        <h3>Browse Our Menu</h3>
+        <p>Experience the taste of fresh and homemade every time.</p>
+    </div>
+    <div class="category_banner">
+        <div class="appetizer">
+            <img src="./../../../../../assets/image/appetizer2.jpg" alt="">
+            <a routerLink="categoryitems?id=" (click)="appetizer()">
+                <p>Appetizer</p>
+            </a>
+            <p>Explore More</p>
+        </div>
+        <div class="maincourses">
+            <img src="./../../../../../assets/image/maincourse1.jpg" alt="">
+            <a routerLink="categoryitems?id=" (click)="maincourse()" >
+                <p>Main Courses</p>
+            </a>
+            <p>Explore More</p>
+        </div>
+        <div class="dessert">
+            <img src="./../../../../../assets/image/dessert1.jpg" alt="">
+            <a routerLink="categoryitems?id=" (click)="dessert()" >
+                <p>Dessert</p>
+            </a>
+            <p>Explore More</p>
+        </div>
+        <div class="beverages">
+            <img src="./../../../../../assets/image/beverages1.jpg" alt="">
+            <a  routerLink="categoryitems?id=" (click)="baverages()" >
+                <p>Beverages</p>
+            </a>
+            <p>Explore More</p>
+        </div>
+    </div>
+</div>

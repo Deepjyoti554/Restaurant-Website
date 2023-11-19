@@ -1,0 +1,44 @@
+<div class="userNavbar">
+    <div class="nav_logo">
+        <img src="./../../../../assets/image/logo1.png" alt="">
+        <h3>Foody</h3>
+    </div>
+    <div class="nav_list">
+        <a href=""><p>Home</p></a>
+        <p>About</p>
+        <p>Manu</p>
+        <p>Contact</p>
+    </div>
+    <div class="userNavIcon">
+        <button routerLink="/usercart" type="button" class="btn btn-primary">
+            Cart <span class="badge badge-light"></span>
+            <span class="sr-only"></span>
+          </button>
+        <!-- <a routerLink="/usercart"><button>Cart</button></a> -->
+    </div>
+</div>
+
+<!-- <app-homenavbar></app-homenavbar> -->
+<div class="userhome">
+    <div class="homeText">
+        <h1>{{categoryItem.toUpperCase()}} MENU</h1>
+        <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.
+        </p>
+    </div>
+    <div>
+        <!-- <app-cart></app-cart> -->
+        <div class="product">
+            <div class="card" style="width: 18rem;" *ngFor="let item of categoryArray">
+                <img src="{{item.items[0].image}}" style="height: 15rem; width: 18rem;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3>{{item.items[0].price}} ₹</h3>
+                    <h4 class="card-title">{{item.items[0].name}}</h4>
+                    <h5 class="card-text">{{item.items[0].category.substring(0, 30)}}</h5>
+                    <a ><button [disabled]="customerObject.cart.includes(item.items[0])" (click)="addTocart(item.items[0])" class="btn btn-primary">ADD TO CART</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

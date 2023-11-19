@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Colorful Profile Page</title>
+    <style>
+        /* body {
+      background-color: #f7dcca;
+    } */
+
+        .profile {
+            margin: 50px auto;
+            width: 400px;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .profile:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .profile-pic {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #ffc73d;
+            box-shadow: 0 0 20px rgba(255, 199, 61, 0.5);
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            color: #f83e5a;
+        }
+
+        .email {
+            font-size: 20px;
+            color: #f77d73;
+            text-align: center;
+        }
+
+        .rating {
+            font-size: 20px;
+            color: #f7941d;
+            text-align: center;
+        }
+
+        .schedule {
+            font-size: 20px;
+            color: #f6ad55;
+            text-align: center;
+        }
+
+        .field {
+            font-size: 20px;
+            color: #fbbf24;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <app-staffnavbar></app-staffnavbar>
+    <div style="display: flex;">
+        <app-staffsidebar></app-staffsidebar>
+        <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+            <div class="product d-flex flex-wrap">
+                <div class="profile" *ngFor="let staff of staffDetails">
+                    <img src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                        alt="Profile Picture" class="profile-pic">
+                    <h1 class="name">{{staff.name}}</h1>
+                    <p class="email">{{staff.email}}</p>
+                    <p class="rating">{{staff.rating}}/5</p>
+                    <p class="schedule">{{staff.shift}}</p>
+                    <p class="field">{{staff.role}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

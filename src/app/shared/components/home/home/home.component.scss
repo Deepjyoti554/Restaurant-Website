@@ -1,0 +1,99 @@
+.banner {
+    position: relative;
+}
+
+.banner>img {
+    width: 100%;
+    height: 40vw;
+    flex-shrink: 0;
+    /* filter: blur(2px); */
+}
+
+.bannerText {
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    // background-color: red;
+    width: 40rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.bannerHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vw;
+    h1{
+        font-size: 4vw;
+        color: var(--neutral-07, #2C2F24);
+    }
+    p{
+        font-style: italic;
+        color: var(--neutral-07, #2C2F24);
+    }
+}
+
+.bannerButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    button{
+        padding: 1vw 2vw;
+        border-radius: 118px;
+        cursor: pointer;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+    #leftButton{
+        background: #AD343E;
+
+    }
+}
+
+.category {
+    text-align: center;
+    padding: 5vw;
+    height: 40vw;
+    width: 100%;
+    // background-color: azure;
+}
+
+.category_banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.category_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    margin-bottom: 4vw;
+}
+
+.appetizer>img {
+    height: 20vw;
+    width: 20vw;
+}
+
+.maincourses>img {
+    height: 20vw;
+    width: 20vw;
+}
+
+.dessert>img {
+    height: 20vw;
+    width: 20vw;
+}
+
+.beverages>img {
+    height: 20vw;
+    width: 20vw;
+}

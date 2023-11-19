@@ -1,0 +1,42 @@
+<app-managernavbar></app-managernavbar>
+
+<div style="display: flex;">
+    <app-managersidebar></app-managersidebar>
+    <div class="content w-100" style="overflow-x: scroll; ">
+        <div style="margin-top: 2vw; width: 94%; height: 90vh;">
+            <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="id">
+                    <th mat-sort-header mat-header-cell *matHeaderCellDef> ID</th>
+                    <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-sort-header mat-header-cell *matHeaderCellDef> Name</th>
+                    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="email">
+                    <th mat-sort-header mat-header-cell *matHeaderCellDef> Email</th>
+                    <td mat-cell *matCellDef="let element">{{element.email}}</td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> Action</th>
+                    <td mat-cell *matCellDef="let element">
+                        <button (click)="giveRating(element.id)" mat-raised-button color="primary">Give Rating</button>
+                        <button mat-raised-button color="warn" (click)="scheduleStaff(element.id)">Schedule</button>
+                    </td>
+                </ng-container>
+
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row;columns:displayedColumns"></tr>
+
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons
+                aria-label="Select page of periodic elements">
+            </mat-paginator>
+        </div>
+    </div>
+</div>

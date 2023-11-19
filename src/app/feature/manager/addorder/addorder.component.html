@@ -1,0 +1,55 @@
+<app-managernavbar></app-managernavbar>
+
+<div style="display: flex;">
+    <app-managersidebar></app-managersidebar>
+    <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+        <form id="form_Id" [formGroup]="order">
+            <h2>Add Student Details</h2>
+
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="name">
+            </div>
+            <div class="form-group">
+                <label for="name">Image</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="image">
+            </div>
+            <div class="form-group">
+                <label for="name">Description</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="description">
+            </div>
+            <div>
+                <select class="form-select" formControlName="category" id="exampleFormControlSelect1">
+                    <option value="">---select---</option>
+                    <option value="Maincourse">Maincourse</option>
+                    <option value="Appertizer">Appertizer</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Baverages">Baverages</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="name">price</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="price">
+            </div>
+            <div class="form-group">
+                <label for="name">Rating</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="rating">
+            </div>
+            <div class="form-group">
+                <label for="name">Quantity</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="quantity">
+            </div>
+            <div class="form-group">
+                <label for="name">Ingredient Name</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="ingredientName">
+            </div>
+            <div class="form-group">
+                <label for="name">Ingredient Quantity</label>
+                <input class="form-control" type="text" placeholder="Enter name" formControlName="ingredientQuantity">
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </form>
+
+    </div>
+</div>

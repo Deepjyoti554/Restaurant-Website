@@ -1,0 +1,21 @@
+<app-staffnavbar></app-staffnavbar>
+<div style="display: flex;">
+    <app-staffsidebar></app-staffsidebar>
+    <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+        <div class="product d-flex flex-wrap">
+            <div class="card" style=" width: 30rem;" *ngFor="let item of temp">
+                <img src="{{item.cart[0].image}}" style="height: 25rem; width: 30rem;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3>CUSTOMER NAME: {{item.name}}</h3>
+                    <h4>CUSTOMER ID: {{item.id}}</h4>
+                    <h4 class="card-title">ITEM NAME: {{item.cart[0].name}}</h4>
+                    <h4 class="card-title">ITEM CATEGORY: {{item.cart[0].category}}</h4>
+                    <h4 class="card-title">ITEM DESCRIPTION {{item.cart[0].description}}</h4>
+                    <div class="buttons">
+                        <button  class="btn btn-primary">ACCEPT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

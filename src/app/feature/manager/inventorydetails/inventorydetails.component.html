@@ -1,0 +1,19 @@
+<app-managernavbar></app-managernavbar>
+
+<div style="display: flex;">
+  <app-managersidebar></app-managersidebar>
+  <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+    <div style="margin: 5vw 19vw; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+      <img style="height: 30vw; width: 40vw;" class="card-img-top" src="{{product.items[0].image}}" alt="">
+      <div style="display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1vw; margin-top: 2vw;">
+        <p><strong>Product Id:</strong>  {{product.items[0].itemId}}</p>
+        <p><strong> Product Name:</strong> {{product.items[0].name}}</p>
+        <p><strong>Product Description:</strong> {{product.items[0].description}}</p>
+        <p><strong>Product Category:</strong> {{product.items[0].category}}</p>
+        <p><strong>Product Rating:</strong> {{product.items[0].rating}}</p>
+        <p><strong>Product Ingredient Name:</strong> {{product.items[0].ingredients.name}}</p>
+        <p><strong>Product Quantity:</strong> {{product.items[0].ingredients.quantity}}</p>
+      </div>
+    </div>
+  </div>
+</div>

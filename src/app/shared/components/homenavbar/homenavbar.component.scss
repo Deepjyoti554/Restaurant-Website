@@ -1,0 +1,52 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.userNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vw;
+    width: 100%;
+    padding: 2vw;
+    // background-color: #ede2e2;
+    background-color: rgb(249, 249, 247);
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}
+
+.userNavIcon {
+
+    // display: inline-flex;
+    // padding: 10px 15px;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 10px;
+    // border-radius: 118px;
+    // border: 1.5px solid var(--neutral-07, #2C2F24);
+    // margin-right: 3.5vw;
+    button {
+        padding: 10px 20px;
+        border-radius: 118px;
+        border: 1.5px solid var(--neutral-07, #2C2F24);
+        margin-right: 3.5vw;
+    }
+}
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3.5vw;
+    /* gap: 1vw; */
+}
+
+.nav_logo>img {
+    height: 5vw;
+    width: 5vw;
+}

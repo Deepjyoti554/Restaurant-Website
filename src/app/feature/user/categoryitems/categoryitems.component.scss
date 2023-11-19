@@ -1,0 +1,107 @@
+
+
+.product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin-top: 5vw;
+    margin-left: 3vw;
+
+    .card{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    }
+
+    .btn-sm {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.userNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5vw;
+    width: 100%;
+    padding: 2vw;
+    // background-color: #ede2e2;
+    background-color: rgb(249, 249, 247);
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4vw;
+}
+
+// .userNavIcon {
+
+//     // display: inline-flex;
+//     // padding: 10px 15px;
+//     // justify-content: center;
+//     // align-items: center;
+//     // gap: 10px;
+//     // border-radius: 118px;
+//     // border: 1.5px solid var(--neutral-07, #2C2F24);
+//     // margin-right: 3.5vw;
+//     // button {
+//     //     padding: 10px 20px;
+//     //     border-radius: 118px;
+//     //     border: 1.5px solid var(--neutral-07, #2C2F24);
+//     //     margin-right: 3.5vw;
+//     // }
+// }
+
+.nav_logo {
+    display: flex;
+    align-items: center;
+    margin-left: 3.5vw;
+    /* gap: 1vw; */
+}
+
+.nav_logo>img {
+    height: 5vw;
+    width: 5vw;
+}
+
+.homeText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1vw;
+    margin-top: 5vw;
+
+    h1 {
+        color: var(--neutral-07, #2C2F24);
+        text-align: center;
+
+        /* Headline/H1 */
+        font-family: Playfair Display;
+        font-size: 100px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 96px;
+        /* 96% */
+    }
+
+    p {
+        color: var(--neutral-06, #495460);
+        text-align: center;
+
+        /* Body/18px/Regular */
+        font-family: DM Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+        /* 155.556% */
+    }
+}

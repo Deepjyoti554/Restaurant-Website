@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Hey </h1>
+<form [formGroup]="formData">
+<div mat-dialog-content >
+  <p>Give your concern</p>
+  <mat-form-field >
+    <mat-label>Give rating / schedule</mat-label>
+    <input formControlName="name" matInput >
+  </mat-form-field>
+</div>
+</form>
+<div mat-dialog-actions>
+  <button (click)="onNoClick()" mat-button >No Thanks</button>
+  <button (click)="onSubmit()" mat-button  cdkFocusInitial>Ok</button>
+</div>

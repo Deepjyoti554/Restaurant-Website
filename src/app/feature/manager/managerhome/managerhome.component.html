@@ -1,0 +1,24 @@
+<app-managernavbar></app-managernavbar>
+
+<div style="display: flex;">
+    <app-managersidebar></app-managersidebar>
+    <div class="content w-100" style="overflow-x: scroll; height: 90vh;">
+        <div class="product d-flex flex-wrap"> 
+            <div [ngClass]="{'red-card': item.items[0].ingredients.quantity < 10}" class="card" style="width: 21rem;" *ngFor="let item of productArray">
+                <img src="{{item.items[0].image}}" style="height: 20rem; width: 21rem;" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3>₹ {{item.items[0].price}} </h3>
+                    <h4 class="card-title">{{item.items[0].name}}</h4>
+                    <h5 class="card-text">{{item.items[0].description.substring(0, 30)}}</h5>
+                    <div class="buttons">
+                        <button (click)="deleteToOrder(item)" class="btn btn-primary">Delete</button>
+                        <!-- <button (click)="addToOrder()" class="btn btn-primary">ADD</button> -->
+                        <button routerLink="/editorder?id=" (click)="editToOrder(item)" class="btn btn-primary">Edit</button>
+                        <button routerLink="/inventorydetails?id=" (click)="viewProduct(item)" class="btn btn-primary">View</button>
+                        <button  class="btn btn-primary" (click)="restock(item)">Restalk</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

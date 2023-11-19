@@ -1,0 +1,11 @@
+<div class="navbar" style="height: 10vh;" *ngFor="let item of staffDetails">
+    <div style="display: flex; flex-direction: column;">
+        <div style="display: flex;">
+            <p style="margin-top: 5px; margin-right: 5px;"><mat-icon>account_circle</mat-icon></p>
+            <h4>{{item.name}}</h4>
+        </div>
+    </div>
+    <button (click)="deleteUser()" mat-raised-button matBadge="">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+    </button>
+</div>
